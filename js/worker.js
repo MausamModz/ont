@@ -1,5 +1,5 @@
 const BLOCK_SIZE = 0X14;
-importScripts("https://cdn.jsdelivr.net/gh/MausamModz/ont/js/constants.js", 
+importScripts("js/constants.js", 
 	"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js", 
 	"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/enc-hex.min.js");
 
