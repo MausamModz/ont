@@ -1,4 +1,4 @@
-const myWorker = new Worker('https://cdn.jsdelivr.net/gh/MausamModz/ont/js/worker.js');
+const myWorker = new Worker('js/worker.js');
 
 let sendToWorker = false;
 function GetRandomSalt()
