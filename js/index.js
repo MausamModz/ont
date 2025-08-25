@@ -1,4 +1,4 @@
-const myWorker = new Worker('js/worker.js');
+const myWorker = new Worker('https://cdn.jsdelivr.net/gh/MausamModz/ont/js/worker.js');
 
 let sendToWorker = false;
 function GetRandomSalt()
@@ -186,33 +186,3 @@ GeneratePasswordOnWorker(document.getElementById("PasswordField").value,
 						document.getElementById("SaltField").value, 
 						document.getElementById("EncryptionMode").value * 1);
 OnCipherInputChange();
-
-const pages = ["home", "passgen", "cipher"]
-
-function popStateEvent(e)
-{
-	let target = document.location.hash.substr(1); 
-	if(target == "")
-		target = "home"
-	const elem = document.getElementById(target);
-	if(elem == null)
-		return;
-
-	pages.forEach(page => {
-		if(page == target)
-		{
-			elem.style.display = "block";
-			document.getElementById(page + "link").classList.add("active-page")
-		}
-		else
-		{
-			document.getElementById(page + "link").classList.remove("active-page")
-			document.getElementById(page).style.display = "none";
-		}
-
-	})
-
-}
-
-window.addEventListener('popstate', popStateEvent);
-popStateEvent();
